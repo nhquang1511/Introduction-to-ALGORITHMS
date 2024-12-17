@@ -1,11 +1,14 @@
 function insertion_sort(n){
-    for(i = 1;i++;i<n.length){
-        key = a[i]
+    for(i = 1;i<n.length;i++){
+        key = n[i]
         j = i - 1
-        while(i>0 && a[i]>key){
-            a[j+1] = a[j]
+        while(j>0 && n[j]>key){
+            n[j+1] = n[j]
             j-=1
         }
-        a[j+1] = key
+        n[j+1] = key
     }
+    return n
 }
+a = [1,5,3,2,9,6]
+console.log(insertion_sort(a))
